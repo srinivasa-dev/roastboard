@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 Roasting Scoreboard</title>
+
+    <!-- ✅ SEO Meta Tags -->
+    <meta name="description" content="🔥 The ultimate roasting scoreboard! Track and compare your friends' roasting skills in a fun and interactive way.">
+    <meta name="keywords" content="roasting scoreboard, funny leaderboard, roast battle, friendly competition, fun scoreboard">
+    <meta name="author" content="Srinivasa Yadav">
+    <meta name="robots" content="index, follow">
+
+    <!-- ✅ Open Graph (For Social Media Preview) -->
+    <meta property="og:title" content="🔥 Roasting Scoreboard">
+    <meta property="og:description" content="Who's the ultimate roast master? Check out the live scoreboard!">
+    <meta property="og:image" content="./assets/og-image.png"> 
+    <meta property="og:url" content="https://roastboard.srinivasa.dev">
+    <meta property="og:type" content="website">
+
+    <!-- ✅ Twitter Card (For Better Twitter Shares) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="🔥 Roasting Scoreboard">
+    <meta name="twitter:description" content="Who's the best at roasting? Track scores and declare a winner!">
+    <meta name="twitter:image" content="./assets/twitter-image.png">
+
+    <!-- ✅ Favicon (For Browser Tabs) -->
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+
+    <!-- ✅ Structured Data (For Google Rich Snippets) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Roasting Scoreboard",
+        "url": "https://roastboard.srinivasa.dev",
+        "description": "Track and compare your friends' roasting skills in a fun and interactive way.",
+        "author": {
+            "@type": "Person",
+            "name": "Srinivasa Yadav"
+        }
+    }
+    </script>
+
+    <!-- ✅ Stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        fetch('/__env')
+          .then(response => response.json())
+          .then(env => {
+            let clarityKey = env.CLARITY_KEY;
+            if (clarityKey) {
+              let script = document.createElement('script');
+              script.type = 'text/javascript';
+              script.async = true;
+              script.innerHTML = `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "${clarityKey}");`;
+              document.head.appendChild(script);
+            }
+          });
+      </script>
+</head>
+<body>
+
+    <!-- Dark Mode Toggle -->
+    <button id="darkModeToggle">🌙</button>
+
+    <div class="container">
+        <h1>🔥 Roasting Scoreboard</h1>
+        <p class="subtext">Who's the ultimate roast master?</p>
+        <div id="scoreboard"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

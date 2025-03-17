@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* === Light & Dark Mode Variables === */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #222;
+    --card-bg: #f7f7f7;
+    --card-text: #000;
+}
+
+body.dark-mode {
+    --bg-color: #111;
+    --text-color: #fff;
+    --card-bg: #1a1a1a;
+    --card-text: #fff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: all 0.3s ease-in-out;
+}
+
+/* === Dark Mode Toggle Button === */
+#darkModeToggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    padding: 10px 14px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#darkModeToggle:hover {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+/* === Main Container === */
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.subtext {
+    font-size: 1rem;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+/* === Score Cards === */
+#scoreboard {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card {
+    background: var(--card-bg);
+    color: var(--card-text);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}

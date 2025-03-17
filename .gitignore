@@ -1,0 +1,12 @@
+# macOS system files
+.DS_Store
+
+# VS Code workspace settings
+.vscode/
+
+# Log files
+*.log
+
+# Cloudflare Build Files
+.cloudflare/
+dist/
