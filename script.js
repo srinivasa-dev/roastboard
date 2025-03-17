@@ -1,10 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
     const darkModeToggle = document.getElementById("darkModeToggle");
     const body = document.body;
+    const githubLogo = document.getElementById("github-logo");
 
     // Detect system theme and apply it initially
     const systemDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const savedTheme = localStorage.getItem("darkMode");
+
+    function updateGithubLogo() {
+        if (body.classList.contains("dark-mode")) {
+            githubLogo.src = "./assets/github-mark-black.svg";
+        } else {
+            githubLogo.src = "./assets/github-mark-white.svg";
+        }
+    }
 
     if (savedTheme === "enabled" || (!savedTheme && systemDarkMode)) {
         body.classList.add("dark-mode");
@@ -22,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem("darkMode", "disabled");
             darkModeToggle.textContent = "🌙";
         }
+        updateGithubLogo();
     });
 
     // Fetch and display scores

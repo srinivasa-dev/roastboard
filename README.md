@@ -10,7 +10,7 @@ A **minimal and modern** roasting scoreboard to track who’s winning the roast 
 
 ## 📦 Installation
 1. Clone the repo:  
-git clone https://github.com/yourusername/roasting-scoreboard.git
+git clone https://github.com/srinivasa-dev/roastboard.git
 
 
 2. Open `index.html` in a browser.
